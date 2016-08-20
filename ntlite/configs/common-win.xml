@@ -242,7 +242,7 @@
 						<InstallFrom>
 							<MetaData>
 								<Key>/IMAGE/NAME</Key>
-								<Value>Windows 10 Education</Value>
+								<Value>Windows 7+</Value>
 							</MetaData>
 						</InstallFrom>
 					</OSImage>
@@ -289,8 +289,8 @@
 	<ApplyOptions>
 		<AutoRelease>true</AutoRelease>
 		<AutoISO>false</AutoISO>
-		<AutoIsoFile>wX_custom_x64.iso</AutoIsoFile>
-		<AutoIsoLabel>wX_custom_x64</AutoIsoLabel>
+		<AutoIsoFile>w_custom_x64.iso</AutoIsoFile>
+		<AutoIsoLabel>w_custom_x64</AutoIsoLabel>
 		<AutoExportImage>true</AutoExportImage>
 		<AutoExportEsd>false</AutoExportEsd>
 		<AutoSplitImage>false</AutoSplitImage>
