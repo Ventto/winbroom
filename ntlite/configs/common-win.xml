@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>08/11/2016 16:38</Date>
+	<AppInfo>
+		<Version>1.1.0.4135</Version>
+		<Licensed>No</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 7+ 64-bit</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 7+ 64-bit</Version>
+		<GUID></GUID>
+	</ImageInfo>
+	<RemoveComponents>
+		<Component>Microsoft.3DBuilder</Component>
+		<Component>Microsoft.AAD.BrokerPlugin</Component>
+		<Component>Microsoft.AccountsControl</Component>
+		<Component>Microsoft.Appconnector</Component>
+		<Component>Microsoft.BingFinance</Component>
+		<Component>Microsoft.BingNews</Component>
+		<Component>Microsoft.BingSports</Component>
+		<Component>Microsoft.BingWeather</Component>
+		<Component>Microsoft.BioEnrollment</Component>
+		<Component>Microsoft.CommsPhone</Component>
+		<Component>Microsoft.ConnectivityStore</Component>
+		<Component>Microsoft.Getstarted</Component>
+		<Component>Microsoft.LockApp</Component>
+		<Component>Microsoft.Messaging</Component>
+		<Component>Microsoft.MicrosoftEdge</Component>
+		<Component>Microsoft.MicrosoftOfficeHub</Component>
+		<Component>Microsoft.MicrosoftSolitaireCollection</Component>
+		<Component>Microsoft.Office.OneNote</Component>
+		<Component>Microsoft.Office.Sway</Component>
+		<Component>Microsoft.People</Component>
+		<Component>Microsoft.SkypeApp</Component>
+		<Component>Microsoft.Windows.AssignedAccessLockApp</Component>
+		<Component>Microsoft.Windows.ContentDeliveryManager</Component>
+		<Component>Microsoft.Windows.FeatureOnDemand.InsiderHub</Component>
+		<Component>Microsoft.Windows.ParentalControls</Component>
+		<Component>Microsoft.Windows.Photos</Component>
+		<Component>Microsoft.Windows.SecondaryTileExperience</Component>
+		<Component>Microsoft.WindowsAlarms</Component>
+		<Component>Microsoft.WindowsCalculator</Component>
+		<Component>Microsoft.WindowsCamera</Component>
+		<Component>Microsoft.WindowsFeedback</Component>
+		<Component>Microsoft.WindowsMaps</Component>
+		<Component>Microsoft.WindowsPhone</Component>
+		<Component>Microsoft.WindowsSoundRecorder</Component>
+		<Component>Microsoft.XboxApp</Component>
+		<Component>Microsoft.XboxGameCallableUI</Component>
+		<Component>Microsoft.XboxIdentityProvider</Component>
+		<Component>Microsoft.ZuneMusic</Component>
+		<Component>Microsoft.ZuneVideo</Component>
+		<Component>Windows.ContactSupport</Component>
+		<Component>Windows.MiracastView</Component>
+		<Component>Windows.PurchaseDialog</Component>
+		<Component>adamclient</Component>
+		<Component>driver_bcmdhd.inf</Component>
+		<Component>driver_bcmdhd64.inf</Component>
+		<Component>driver_mrvlpcie8897.inf</Component>
+		<Component>driver_net8185.inf</Component>
+		<Component>driver_netax88179_178a.inf</Component>
+		<Component>driver_netax88772.inf</Component>
+		<Component>driver_netbc64.inf</Component>
+		<Component>driver_netrtwlane.inf</Component>
+		<Component>driver_netrtwlane_13.inf</Component>
+		<Component>driver_netrtwlans.inf</Component>
+		<Component>driver_netrtwlanu.inf</Component>
+		<Component>driver_oem0.inf_prnms009.inf</Component>
+		<Component>driver_oem1.inf_prnms001.inf</Component>
+		<Component>driver_prnbrcl1.inf_prnbrcl1.inf</Component>
+		<Component>driver_prncacl1.inf_prncacl1.inf</Component>
+		<Component>driver_prncacl2.inf_prncacl2.inf</Component>
+		<Component>driver_prncacla.inf_prncacla.inf</Component>
+		<Component>driver_prndlcl1.inf_prndlcl1.inf</Component>
+		<Component>driver_prndlclf.inf_prndlclf.inf</Component>
+		<Component>driver_prndlclv.inf_prndlclv.inf</Component>
+		<Component>driver_prndlclw.inf_prndlclw.inf</Component>
+		<Component>driver_prnekcl2.inf_prnekcl2.inf</Component>
+		<Component>driver_prnepcl2.inf_prnepcl2.inf</Component>
+		<Component>driver_prnfxcl2.inf_prnfxcl2.inf</Component>
+		<Component>driver_prngeclv.inf</Component>
+		<Component>driver_prnhpcl1.inf_prnhpcl1.inf</Component>
+		<Component>driver_prnhpcl2.inf_prnhpcl2.inf</Component>
+		<Component>driver_prnhpcl3.inf_prnhpcl3.inf</Component>
+		<Component>driver_prnhpcl4.inf_prnhpcl4.inf</Component>
+		<Component>driver_prnhpcl5.inf_prnhpcl5.inf</Component>
+		<Component>driver_prnkmcl2.inf_prnkmcl2.inf</Component>
+		<Component>driver_prnkmcl4.inf_prnkmcl4.inf</Component>
+		<Component>driver_prnkycl1.inf_prnkycl1.inf</Component>
+		<Component>driver_prnlxclv.inf_prnlxclv.inf</Component>
+		<Component>driver_prnlxclw.inf_prnlxclw.inf</Component>
+		<Component>driver_prnms007.inf</Component>
+		<Component>driver_prnms008.inf</Component>
+		<Component>driver_prnnecl2.inf_prnnecl2.inf</Component>
+		<Component>driver_prnokcl1.inf_prnokcl1.inf</Component>
+		<Component>driver_prnokcl2.inf_prnokcl2.inf</Component>
+		<Component>driver_prnrccl1.inf_prnrccl1.inf</Component>
+		<Component>driver_prnsacl1.inf_prnsacl1.inf</Component>
+		<Component>driver_prntscl2.inf_prntscl2.inf</Component>
+		<Component>driver_prntscl3.inf_prntscl3.inf</Component>
+		<Component>driver_prnxxcl3.inf_prnxxcl3.inf</Component>
+		<Component>driver_prnxxcl4.inf_prnxxcl4.inf</Component>
+		<Component>driver_wiabr00b.inf</Component>
+		<Component>driver_wiaca00j.inf</Component>
+		<Component>driver_wiadl003.inf</Component>
+		<Component>driver_wiaek002.inf</Component>
+		<Component>driver_wiaep003.inf</Component>
+		<Component>driver_wiaep004.inf</Component>
+		<Component>driver_wiahp008.inf</Component>
+		<Component>driver_wiaky002.inf</Component>
+		<Component>driver_wiaky003.inf</Component>
+		<Component>driver_wiasa003.inf</Component>
+		<Component>driver_wiaxx002.inf</Component>
+		<Component>eefcontainer</Component>
+		<Component>embeddedexperience</Component>
+		<Component>flashactivex</Component>
+		<Component>hwsupport_fax</Component>
+		<Component>iis</Component>
+		<Component>internetexplorerfeature</Component>
+		<Component>journal</Component>
+		<Component>keyboardfilter</Component>
+		<Component>langarabic</Component>
+		<Component>langbulgarian</Component>
+		<Component>langchineses</Component>
+		<Component>langchineset</Component>
+		<Component>langcroatian</Component>
+		<Component>langczech</Component>
+		<Component>langdanish</Component>
+		<Component>langdutch</Component>
+		<Component>langenglishgb</Component>
+		<Component>langestonian</Component>
+		<Component>langfinnish</Component>
+		<Component>langfrenchcanadian</Component>
+		<Component>langgerman</Component>
+		<Component>langgreek</Component>
+		<Component>langhebrew</Component>
+		<Component>langhungarian</Component>
+		<Component>langime</Component>
+		<Component>langimejp</Component>
+		<Component>langimeko</Component>
+		<Component>langimetc</Component>
+		<Component>langitalian</Component>
+		<Component>langjapanese</Component>
+		<Component>langkorean</Component>
+		<Component>langlatvian</Component>
+		<Component>langlithuanian</Component>
+		<Component>langnorwegian</Component>
+		<Component>langpolish</Component>
+		<Component>langportuguesept</Component>
+		<Component>langpseudolocale</Component>
+		<Component>langromanian</Component>
+		<Component>langrussian</Component>
+		<Component>langserbian</Component>
+		<Component>langslovak</Component>
+		<Component>langslovenian</Component>
+		<Component>langspanish</Component>
+		<Component>langswedish</Component>
+		<Component>langthai</Component>
+		<Component>langturkish</Component>
+		<Component>langukrainian</Component>
+		<Component>manifestbackup</Component>
+		<Component>mediaplayer</Component>
+		<Component>mediaplayernetworksharing</Component>
+		<Component>mediastreaming</Component>
+		<Component>microsoft.windowscommunicationsapps</Component>
+		<Component>mobilepc</Component>
+		<Component>mobilepc_networkprojection</Component>
+		<Component>mobilepc_sensors</Component>
+		<Component>otherthemes</Component>
+		<Component>rdpclient</Component>
+		<Component>rdpserver</Component>
+		<Component>remoteassistance</Component>
+		<Component>remoteportredirector</Component>
+		<Component>rotationmanager</Component>
+		<Component>search</Component>
+		<Component>sharemediacpl</Component>
+		<Component>shelllauncher</Component>
+		<Component>soundthemes</Component>
+		<Component>stickynotes</Component>
+		<Component>tabletpc</Component>
+		<Component>textprediction</Component>
+		<Component>wallet</Component>
+		<Component>wallpaperdefault</Component>
+		<Component>wallpapers</Component>
+		<Component>webcamexperience</Component>
+		<Component>windows.devicesflow</Component>
+		<Component>winsat</Component>
+	</RemoveComponents>
+	<Compatibility protectHidden="false">
+		<ComponentFeatures>
+			<Feature enabled="no">CortanaSupport</Feature>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="no">Hyper-V</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="yes">OOBE</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">AppxSupport</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMWare VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features>
+		<Feature name="Microsoft-Hyper-V-All">true</Feature>
+		<Feature name="MediaPlayback">false</Feature>
+		<Feature name="Printing-XPSServices-Features">false</Feature>
+		<Feature name="SimpleTCP">true</Feature>
+		<Feature name="TelnetClient">true</Feature>
+		<Feature name="TFTP">true</Feature>
+		<Feature name="WindowsMediaPlayer">false</Feature>
+		<Feature name="SearchEngine-Client-Package">false</Feature>
+		<Feature name="Xps-Foundation-Xps-Viewer">false</Feature>
+	</Features>
+	<AddPackages></AddPackages>
+	<Drivers showHidden="false">
+		<AddDrivers></AddDrivers>
+	</Drivers>
+	<Unattended mode="0">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>true</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-Setup">
+				<DynamicUpdate>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/NAME</Key>
+								<Value>Windows 10 Education</Value>
+							</MetaData>
+						</InstallFrom>
+					</OSImage>
+				</ImageInstall>
+				<UserData>
+					<ProductKey>
+						<Key></Key>
+					</ProductKey>
+				</UserData>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Machine>
+			<TweakGroup name="System">
+				<Tweak name="EnableFirstLogonAnimation">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Windows">
+				<Tweak name="Manual">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="MetroTweaks">
+				<Tweak name="DisableWindowsConsumerFeatures">1</Tweak>
+			</TweakGroup>
+		</Machine>
+		<Users></Users>
+		<Services>
+			<TweakGroup name="services">
+				<Tweak name="service_AxInstSV">4</Tweak>
+				<Tweak name="service_DiagTrack">4</Tweak>
+				<Tweak name="service_DPS">4</Tweak>
+				<Tweak name="service_PcaSvc">4</Tweak>
+				<Tweak name="service_seclogon">4</Tweak>
+				<Tweak name="service_wscsvc">4</Tweak>
+				<Tweak name="service_lmhosts">4</Tweak>
+				<Tweak name="service_TabletInputService">4</Tweak>
+				<Tweak name="service_WbioSrvc">4</Tweak>
+				<Tweak name="service_WerSvc">4</Tweak>
+				<Tweak name="service_WSearch">4</Tweak>
+				<Tweak name="service_WSService">4</Tweak>
+				<Tweak name="service_wuauserv">4</Tweak>
+			</TweakGroup>
+		</Services>
+	</Tweaks>
+	<ApplyOptions>
+		<AutoRelease>true</AutoRelease>
+		<AutoISO>false</AutoISO>
+		<AutoIsoFile>wX_custom_x64.iso</AutoIsoFile>
+		<AutoIsoLabel>wX_custom_x64</AutoIsoLabel>
+		<AutoExportImage>true</AutoExportImage>
+		<AutoExportEsd>false</AutoExportEsd>
+		<AutoSplitImage>false</AutoSplitImage>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<AutoBackupLog>true</AutoBackupLog>
+		<AutoBackupPreset>true</AutoBackupPreset>
+		<CleanHotfixedLeftovers>false</CleanHotfixedLeftovers>
+		<SealFeatures>false</SealFeatures>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Add></Add>
+		<Change></Change>
+		<Remove></Remove>
+	</Execution>
+	<Registry></Registry>
+</Preset>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>08/18/2016 22:38</Date>
+	<AppInfo>
+		<Version>1.1.0.4135</Version>
+		<Licensed>No</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 7 Professional SP1 64-bit</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 7 Professional SP1 64-bit</Version>
+		<GUID></GUID>
+	</ImageInfo>
+	<RemoveComponents>
+		<Component>dvdmaker</Component>
+		<Component>hwsupport_scanner</Component>
+		<Component>hwsupport_wia</Component>
+		<Component>marketthemes</Component>
+		<Component>parentalcontrols</Component>
+		<Component>stici</Component>
+	</RemoveComponents>
+	<Compatibility protectHidden="false">
+		<ComponentFeatures>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="no">ManualSetup</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="no">NetworkMap</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMWare VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features>
+		<Feature name="WindowsGadgetPlatform">false</Feature>
+	</Features>
+	<AddPackages></AddPackages>
+	<Drivers showHidden="false">
+		<AddDrivers></AddDrivers>
+	</Drivers>
+	<Unattended mode="0">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-Setup">
+				<DynamicUpdate>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/NAME</Key>
+								<Value>Windows 7 PROFESSIONAL</Value>
+							</MetaData>
+						</InstallFrom>
+					</OSImage>
+				</ImageInstall>
+				<UserData>
+					<ProductKey>
+						<Key></Key>
+					</ProductKey>
+				</UserData>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Machine></Machine>
+		<Users></Users>
+		<Services></Services>
+	</Tweaks>
+	<ApplyOptions>
+		<AutoRelease>true</AutoRelease>
+		<AutoISO>false</AutoISO>
+		<AutoIsoFile>.w7-pro_x64iso</AutoIsoFile>
+		<AutoIsoLabel>w7-pro_x64</AutoIsoLabel>
+		<AutoExportImage>true</AutoExportImage>
+		<AutoExportEsd>false</AutoExportEsd>
+		<AutoSplitImage>false</AutoSplitImage>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<AutoBackupLog>true</AutoBackupLog>
+		<AutoBackupPreset>true</AutoBackupPreset>
+		<CleanHotfixedLeftovers>false</CleanHotfixedLeftovers>
+		<SealFeatures>false</SealFeatures>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Add></Add>
+		<Change></Change>
+		<Remove></Remove>
+	</Execution>
+	<Registry></Registry>
+</Preset>
