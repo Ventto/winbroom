@@ -84,7 +84,7 @@
 	<ApplyOptions>
 		<AutoRelease>true</AutoRelease>
 		<AutoISO>false</AutoISO>
-		<AutoIsoFile>.w7-pro_x64iso</AutoIsoFile>
+		<AutoIsoFile>w7-pro_x64.iso</AutoIsoFile>
 		<AutoIsoLabel>w7-pro_x64</AutoIsoLabel>
 		<AutoExportImage>true</AutoExportImage>
 		<AutoExportEsd>false</AutoExportEsd>
