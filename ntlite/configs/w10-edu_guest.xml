@@ -26,12 +26,12 @@
 			<Feature enabled="yes">Recommended-All</Feature>
 			<Feature enabled="no">Recommended-Tablet</Feature>
 			<Feature enabled="yes">USB</Feature>
-			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">VisualStudio</Feature>
 			<Feature enabled="yes">AppxSupport</Feature>
 			<Feature enabled="yes">WindowsUpdate</Feature>
 		</ComponentFeatures>
 		<MachineDrivers>
-			<Machine enabled="no>HostMachine</Machine>
+			<Machine enabled="no">HostMachine</Machine>
 			<Machine enabled="yes">Hyper-V VM</Machine>
 			<Machine enabled="no">Parallels VM</Machine>
 			<Machine enabled="yes">Virtual Box VM</Machine>
