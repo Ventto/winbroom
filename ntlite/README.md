@@ -11,6 +11,11 @@ In `configs/`:
 * **w7_pro** - especially for Windows 7.
 * **w10_guest** - especially for Windows 10 as guest OS.
 
+In `registration-entries/`:
+* **wb_activesetup.py** - Python tool to generate Batch file for adding HKCU subkeys in HKLM Active Setup
+* **registration-entries.xml** - example of XML file containing the HCKU subkeys"
+* `HKCU/*.reg` - waiting for another tool to convert .reg into XML
+
 The config files can be used in conjunction (common.xml & w7_pro or common.xml & w10_guest).
 
 ## Post-Setup 
@@ -75,5 +80,6 @@ Finally, there's nothing for it but to import the Batch script to the NTLite's P
 
 ## TODO
 
-* Development of winbroom-regtool
-* Suggest that NTLite developers add a made-to-measure feature to remove useless drivers according to the local machine
+* Make Python tool to convert .REG into .XML
+* ~~Make Python tool to generate Batch file to add HKCU subkeys in HKLM\...\Active Setup (as above)~~
+* ~~Suggest that NTLite developers add a made-to-measure feature to remove useless drivers according to the local machine~~
