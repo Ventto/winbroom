@@ -17,7 +17,7 @@ Win-Broom is personal repo which contains a little assembly of scripts and confi
 - `chocolatey/package-profiles/`:  contains the package list xml files.
 
 - `ntlite/configs`: contains the NTLite xml config files to custom Windows features & components.
-- `ntlite/registry-entries`: contains temporarily the .reg files to set some HKCU's values.
+- `ntlite/registration-entries`: contains Windows registration entries configuration.
 
 ## Workflow
 
