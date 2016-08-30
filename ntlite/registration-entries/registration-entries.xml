@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<regEntries>
+	<entry name="HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" >
+		<value name="SearchboxTaskbarMode" >
+			<data>0</data>
+			<dataType>REG_DWORD</dataType>
+			<separator></separator>
+		</value>
+	</entry>
+	<entry name="HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" >
+		<value name="BingSearchEnabled" >
+			<data>0</data>
+			<dataType>REG_DWORD</dataType>
+			<separator></separator>
+		</value>
+	</entry>
+	<entry name="HKCU\Control Panel\Desktop" >
+		<value name="WaitToKillAppTimeout" >
+			<data>5000</data>
+			<dataType>REG_SZ</dataType>
+			<separator></separator>
+		</value>
+	</entry>
+</regEntries>
+
