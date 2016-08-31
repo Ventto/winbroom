@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
 import io
-import re
 import sys
-import collections
 
-
+# Get the value's datatype
 def parse_datatype(dataTypeStr):
     if dataTypeStr[0] == '"':
         return 'REG_SZ'
@@ -19,6 +17,7 @@ def parse_datatype(dataTypeStr):
         return 'REG_MULTI_SZ'
     return 'REG_SZ'
 
+# Get the value's data
 def parse_data(dataStr, regfile):
     if dataStr[0] == '"':
         return dataStr[1:len(dataStr)-2]
@@ -32,39 +31,29 @@ def parse_data(dataStr, regfile):
                 hexdata.append(line[1:-1])
                 break
         return "".join(hexdata).replace(" ", "").replace(",", "")
-    return dataStr
+    return dataStr[0:len(dataStr)-1]
 
 regfile_arg = sys.argv[1]
-
 regfile = io.open(regfile_arg, 'r', encoding='utf-16-le')
 
 inSubkey = False
-inValue = False
 extendedData = 1
-firstValue = True
 delMode = False
 
 for line in regfile:
-    # Subkey
+    # Read the subkey
     if line[0] == '[':
         delMode = False
-        if not firstValue:
-            print ('data rows:', extendedData, "\n")
         subkey_path = line[1:len(line)-2]
         if subkey_path[0] == '-':
             delMode = True
         if not delMode:
             print ("".join(['[SUBKEY]\n', subkey_path, '\n']))
-        firstValue = True
     else:
         if delMode:
             continue
-        # Value
+        # Read the value
         if line[0] == '"':
-            inValue = True
-            if not firstValue:
-                print ('data rows:', extendedData, "\n")
-            firstValue = False
             extendedData = 1
             valuedec = line.split('=')
             valuename = valuedec[0][1:len(valuedec[0])-1]
@@ -75,15 +64,6 @@ for line in regfile:
             else:
                 data = parse_data(dataInfo[0], regfile)
             print ("".join(['value:', valuename, '\ntype:',
-                datatype, '\ndata:', '{', data, '}']))
-        # Data
-        else:
-            if len(line) > 2 and inValue:
-                extendedData += 1
-            else:
-                inValue = False
-
-if extendedData > 1:
-    print ('data rows:', extendedData, "\n")
+                datatype, '\ndata:', '{', data, '}\n']))
 
 regfile.close()
