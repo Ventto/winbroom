@@ -33,27 +33,38 @@ def parse_data(dataStr, regfile):
         return "".join(hexdata).replace(" ", "").replace(",", "")
     return dataStr[0:len(dataStr)-1]
 
-regfile_arg = sys.argv[1]
-regfile = io.open(regfile_arg, 'r', encoding='utf-16-le')
-
 inSubkey = False
 extendedData = 1
 delMode = False
+xmlstr = []
+
+regfile_arg = sys.argv[1]
+regfile = io.open(regfile_arg, 'r', encoding='utf-16-le')
+
+xmlstr.append('<?xml version="1.0" encoding="utf-8"?>\n')
+xmlstr.append('<regEntries>\n')
 
 for line in regfile:
     # Read the subkey
     if line[0] == '[':
+        if inSubkey:
+            xmlstr.append('\t</entry>\n')
+        inSubkey = True
         delMode = False
         subkey_path = line[1:len(line)-2]
         if subkey_path[0] == '-':
             delMode = True
         if not delMode:
             print ("".join(['[SUBKEY]\n', subkey_path, '\n']))
+            xmlstr.append('\t<entry>\n')
     else:
         if delMode:
+            inSubkey = False
             continue
         # Read the value
         if line[0] == '"':
+            xmlstr.append('\t\t<value name="')
+
             extendedData = 1
             valuedec = line.split('=')
             valuename = valuedec[0][1:len(valuedec[0])-1]
@@ -65,5 +76,22 @@ for line in regfile:
                 data = parse_data(dataInfo[0], regfile)
             print ("".join(['value:', valuename, '\ntype:',
                 datatype, '\ndata:', '{', data, '}\n']))
+            xmlstr.append(valuename)
+            xmlstr.append('" >\n')
+            xmlstr.append('\t\t\t<data>')
+            xmlstr.append(data)
+            xmlstr.append('</data>\n')
+            xmlstr.append('\t\t\t<dataType>')
+            xmlstr.append(datatype)
+            xmlstr.append('</dataType>\n')
+            xmlstr.append('\t\t</value>\n')
+
+if inSubkey:
+    xmlstr.append('\t</entry>\n')
+
+xmlstr.append('</regEntries>\n')
 
 regfile.close()
+xmlfile = io.open('output.xml', 'w+', encoding='utf-8')
+xmlfile.write("".join(xmlstr).expandtabs(tabsize=4))
+xmlfile.close()
