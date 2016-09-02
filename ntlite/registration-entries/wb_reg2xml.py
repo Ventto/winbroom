@@ -5,15 +5,15 @@ import sys
 
 # Get the value's datatype
 def parse_datatype(dataTypeStr):
-    if dataTypeStr[0] == '"':
+    if dataTypeStr == '"':
         return 'REG_SZ'
-    if dataTypeStr[0] == 'dword':
+    if dataTypeStr == 'dword':
         return 'REG_DWORD'
-    if dataTypeStr[0] == 'hex':
+    if dataTypeStr == 'hex':
         return 'REG_BINARY'
-    if dataTypeStr[0] == 'hex(2)':
+    if dataTypeStr == 'hex(2)':
         return 'REG_EXPAND_SZ'
-    if dataTypeStr[0] == 'hex(7)':
+    if dataTypeStr == 'hex(7)':
         return 'REG_MULTI_SZ'
     return 'REG_SZ'
 
