@@ -1,2 +1,4 @@
+*.swp
 *.bat
 *.reg
+output.xml
