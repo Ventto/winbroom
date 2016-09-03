@@ -56,7 +56,9 @@ for line in regfile:
             delMode = True
         if not delMode:
             print ("".join(['[SUBKEY]\n', subkey_path, '\n']))
-            xmlstr.append('\t<entry>\n')
+            xmlstr.append('\t<entry name="')
+            xmlstr.append(subkey_path)
+            xmlstr.append('">\n')
     else:
         if delMode:
             inSubkey = False
@@ -77,7 +79,7 @@ for line in regfile:
             print ("".join(['value:', valuename, '\ntype:',
                 datatype, '\ndata:', '{', data, '}\n']))
             xmlstr.append(valuename)
-            xmlstr.append('" >\n')
+            xmlstr.append('">\n')
             xmlstr.append('\t\t\t<data>')
             xmlstr.append(data)
             xmlstr.append('</data>\n')
