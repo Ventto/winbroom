@@ -10,7 +10,6 @@ def get_status(filepath):
             sys.exit(1)
         return filepath
 
-# Get the value's datatype
 def parse_datatype(dataTypeStr):
     if dataTypeStr == '"':
         return 'REG_SZ'
@@ -24,7 +23,6 @@ def parse_datatype(dataTypeStr):
         return 'REG_MULTI_SZ'
     return 'REG_SZ'
 
-# Parse the valuedata return it into String
 def parse_data(dataStr, regfile):
     if dataStr[0] == '"':
         return dataStr[1:len(dataStr)-2]
@@ -41,8 +39,7 @@ def parse_data(dataStr, regfile):
         return "".join(hexdata).replace(" ", "").replace(",", "")
     return dataStr[0:len(dataStr)-1]
 
-# Parse the subkey's value and return a XML tag
-def get_valuetag(line, regfile):
+def parse_value(line, regfile):
     valuedec = line.split('=')
     valuename = valuedec[0][1:len(valuedec[0])-1]
     dataInfo = valuedec[1].split(':');
@@ -82,7 +79,7 @@ def reg2xml(regfile):
                 inSubkey = False
                 continue
             if line[0] == '"':
-                xmlstr.append(get_valuetag(line, regfile))
+                xmlstr.append(parse_value(line, regfile))
 
     if inSubkey:
         xmlstr.append('\t</entry>\n')
