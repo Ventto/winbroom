@@ -2,7 +2,7 @@
 
 from xml.etree.ElementTree import ParseError
 import os
-import sys.exit
+import sys
 import xml.etree.ElementTree as ET
 
 def get_status(filepath):
