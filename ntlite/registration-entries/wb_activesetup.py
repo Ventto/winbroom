@@ -1,14 +1,32 @@
 # -*- coding: utf-8 -*-
 
+from xml.etree.ElementTree import ParseError
+import os
 import sys
 import xml.etree.ElementTree as ET
 
-xmlfile_arg = sys.argv[1]
+def get_status(filepath):
+        if not os.path.exists(filepath):
+            print('Error: File not found.\n')
+            sys.exit(1)
+        return filepath
 
-tree = ET.parse(xmlfile_arg)
+if len(sys.argv) != 2:
+    print('Usage: wb_activesetup.py file.XML \n', file=sys.stderr)
+    exit(0)
+
+try:
+    tree = ET.parse(get_status(sys.argv[1]))
+except ParseError:
+    tree = None
+
+if tree == None:
+    print('Error: Bad XML syntax.\n', file=sys.stderr)
+    exit(1)
+
 root = tree.getroot()
 
-f = open('wb_activesetup.bat', 'w')
+batfile = open('activesetup.bat', 'w')
 
 for entry in root.findall('entry'):
     keypath = entry.get('name')
@@ -27,5 +45,6 @@ for entry in root.findall('entry'):
                 '" ^\n\t/v "StubPath" ^\n\t/d "reg add ',
                 keypath, ' /v "', valuename, '" /d "', data, '" /t ', datatype,
                 " /f\" ^\n\t/f\n"])
-        f.write(cmd)
-    f.write("\n\n")
+        batfile.write(cmd)
+
+    batfile.write("\n\n")
