@@ -12,9 +12,9 @@
 		<GUID></GUID>
 	</ImageInfo>
 	<RemoveComponents>
+		<!-- Useless Applications -->
 		<Component>Microsoft.3DBuilder</Component>
 		<Component>Microsoft.AAD.BrokerPlugin</Component>
-		<Component>Microsoft.AccountsControl</Component>
 		<Component>Microsoft.Appconnector</Component>
 		<Component>Microsoft.BingFinance</Component>
 		<Component>Microsoft.BingNews</Component>
@@ -36,7 +36,6 @@
 		<Component>Microsoft.Windows.AssignedAccessLockApp</Component>
 		<Component>Microsoft.Windows.ContentDeliveryManager</Component>
 		<Component>Microsoft.Windows.FeatureOnDemand.InsiderHub</Component>
-		<Component>Microsoft.Windows.ParentalControls</Component>
 		<Component>Microsoft.Windows.Photos</Component>
 		<Component>Microsoft.Windows.SecondaryTileExperience</Component>
 		<Component>Microsoft.WindowsAlarms</Component>
@@ -51,10 +50,8 @@
 		<Component>Microsoft.XboxIdentityProvider</Component>
 		<Component>Microsoft.ZuneMusic</Component>
 		<Component>Microsoft.ZuneVideo</Component>
-		<Component>Windows.ContactSupport</Component>
 		<Component>Windows.MiracastView</Component>
-		<Component>Windows.PurchaseDialog</Component>
-		<Component>adamclient</Component>
+		<!-- Useless printer drivers -->
 		<Component>driver_bcmdhd.inf</Component>
 		<Component>driver_bcmdhd64.inf</Component>
 		<Component>driver_mrvlpcie8897.inf</Component>
@@ -112,6 +109,7 @@
 		<Component>driver_wiaky003.inf</Component>
 		<Component>driver_wiasa003.inf</Component>
 		<Component>driver_wiaxx002.inf</Component>
+		<!-- Useless Service Components -->
 		<Component>eefcontainer</Component>
 		<Component>embeddedexperience</Component>
 		<Component>flashactivex</Component>
@@ -120,6 +118,7 @@
 		<Component>internetexplorerfeature</Component>
 		<Component>journal</Component>
 		<Component>keyboardfilter</Component>
+		<!-- Useless language packages -->
 		<Component>langarabic</Component>
 		<Component>langbulgarian</Component>
 		<Component>langchineses</Component>
@@ -159,6 +158,7 @@
 		<Component>langthai</Component>
 		<Component>langturkish</Component>
 		<Component>langukrainian</Component>
+		<!-- Useless Applications -->
 		<Component>manifestbackup</Component>
 		<Component>mediaplayer</Component>
 		<Component>mediaplayernetworksharing</Component>
