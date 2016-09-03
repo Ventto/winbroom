@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import io
 import sys
@@ -92,6 +92,6 @@ if inSubkey:
 xmlstr.append('</regEntries>\n')
 
 regfile.close()
-xmlfile = io.open('output.xml', 'w+', encoding='utf-8')
+xmlfile = open('output.xml', 'w+')
 xmlfile.write("".join(xmlstr).expandtabs(tabsize=4))
 xmlfile.close()
