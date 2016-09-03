@@ -1,7 +1,14 @@
 # -*- coding: utf-8 -*-
 
 import io
+import os.path
 import sys
+
+def get_status(filepath):
+        if not os.path.exists(filepath):
+            print('Error: File not found.\n')
+            sys.exit(1)
+        return filepath
 
 # Get the value's datatype
 def parse_datatype(dataTypeStr):
@@ -17,12 +24,13 @@ def parse_datatype(dataTypeStr):
         return 'REG_MULTI_SZ'
     return 'REG_SZ'
 
-# Get the value's data
+# Parse the valuedata return it into String
 def parse_data(dataStr, regfile):
     if dataStr[0] == '"':
         return dataStr[1:len(dataStr)-2]
     if dataStr[-2] == '\\':
         hexdata = []
+
         hexdata.append(dataStr[0:-2].replace(",", ""))
         for line in regfile.readlines():
             if line[-2] == '\\':
@@ -33,67 +41,69 @@ def parse_data(dataStr, regfile):
         return "".join(hexdata).replace(" ", "").replace(",", "")
     return dataStr[0:len(dataStr)-1]
 
-inSubkey = False
-extendedData = 1
-delMode = False
-xmlstr = []
+# Parse the subkey's value and return a XML tag
+def get_valuetag(line, regfile):
+    valuedec = line.split('=')
+    valuename = valuedec[0][1:len(valuedec[0])-1]
+    dataInfo = valuedec[1].split(':');
+    datatype = parse_datatype(dataInfo[0])
 
-regfile_arg = sys.argv[1]
-regfile = io.open(regfile_arg, 'r', encoding='utf-16-le')
-
-xmlstr.append('<?xml version="1.0" encoding="utf-8"?>\n')
-xmlstr.append('<regEntries>\n')
-
-for line in regfile:
-    # Read the subkey
-    if line[0] == '[':
-        if inSubkey:
-            xmlstr.append('\t</entry>\n')
-        inSubkey = True
-        delMode = False
-        subkey_path = line[1:len(line)-2]
-        if subkey_path[0] == '-':
-            delMode = True
-        if not delMode:
-            print ("".join(['[SUBKEY]\n', subkey_path, '\n']))
-            xmlstr.append('\t<entry name="')
-            xmlstr.append(subkey_path)
-            xmlstr.append('">\n')
+    if len(dataInfo) > 1:
+        data = parse_data(dataInfo[1], regfile)
     else:
-        if delMode:
-            inSubkey = False
-            continue
-        # Read the value
-        if line[0] == '"':
-            xmlstr.append('\t\t<value name="')
+        data = parse_data(dataInfo[0], regfile)
 
-            extendedData = 1
-            valuedec = line.split('=')
-            valuename = valuedec[0][1:len(valuedec[0])-1]
-            dataInfo = valuedec[1].split(':');
-            datatype = parse_datatype(dataInfo[0])
-            if len(dataInfo) > 1:
-                data = parse_data(dataInfo[1], regfile)
-            else:
-                data = parse_data(dataInfo[0], regfile)
-            print ("".join(['value:', valuename, '\ntype:',
-                datatype, '\ndata:', '{', data, '}\n']))
-            xmlstr.append(valuename)
-            xmlstr.append('">\n')
-            xmlstr.append('\t\t\t<data>')
-            xmlstr.append(data)
-            xmlstr.append('</data>\n')
-            xmlstr.append('\t\t\t<dataType>')
-            xmlstr.append(datatype)
-            xmlstr.append('</dataType>\n')
-            xmlstr.append('\t\t</value>\n')
+    return "".join(['\t\t<value name="', valuename, '">\n',
+                '\t\t\t<data>', data, '</data>\n', '\t\t\t<dataType>', datatype,
+                '</dataType>\n', '\t\t</value>\n'])
 
-if inSubkey:
-    xmlstr.append('\t</entry>\n')
+# Convert REG file into XML string
+def reg2xml(regfile):
+    inSubkey = False
+    delMode = False
+    xmlstr = []
 
-xmlstr.append('</regEntries>\n')
+    xmlstr.append('<?xml version="1.0" encoding="utf-8"?>\n')
+    xmlstr.append('<regEntries>\n')
 
-regfile.close()
-xmlfile = open('output.xml', 'w+')
-xmlfile.write("".join(xmlstr).expandtabs(tabsize=4))
-xmlfile.close()
+    for line in regfile:
+        if line[0] == '[':
+            if inSubkey:
+                xmlstr.append('\t</entry>\n')
+            inSubkey = True
+            delMode = False
+            subkey_path = line[1:len(line)-2]
+            if subkey_path[0] == '-':
+                delMode = True
+            if not delMode:
+                xmlstr.append("".join(['\t<entry name="', subkey_path, '">\n']))
+        else:
+            if delMode:
+                inSubkey = False
+                continue
+            if line[0] == '"':
+                xmlstr.append(get_valuetag(line, regfile))
+
+    if inSubkey:
+        xmlstr.append('\t</entry>\n')
+    xmlstr.append('</regEntries>\n')
+    return "".join(xmlstr).expandtabs(tabsize=4)
+
+
+def main(argv):
+    if len(argv) != 2:
+        print('Usage: wb_reg2xml.py file.REG \n')
+        sys.exit(0)
+
+    regpath_arg = argv[1]
+
+    regfile = io.open(get_status(regpath_arg), 'r', encoding='utf-16-le')
+    xmlstr = reg2xml(regfile)
+    regfile.close()
+
+    xmlfile = open('output.xml', 'w+')
+    xmlfile.write(xmlstr)
+    xmlfile.close()
+
+if __name__ == "__main__":
+    main(sys.argv)
