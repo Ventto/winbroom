@@ -18,12 +18,10 @@ for entry in root.findall('entry'):
         valuename = value.get('name')
         data = value.find('data').text
         datatype = value.find('dataType').text
-        separator = value.find('separator').text
         cmd = ''.join(['reg add ',
                 '"HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\\',
                 keyname, '-', valuename,
-                '" ^\n\t/v "Version" ^\n\t/d "1" /t ', datatype,
-                ' /f\n', 'reg add ',
+                '" ^\n\t/v "Version" ^\n\t/d "1" /f\n reg add ',
                 '"HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\\',
                 keyname, '-', valuename,
                 '" ^\n\t/v "StubPath" ^\n\t/d "reg add ',
