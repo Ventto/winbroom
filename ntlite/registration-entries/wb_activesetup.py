@@ -1,15 +1,19 @@
-#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
+import sys
 import xml.etree.ElementTree as ET
 
-tree = ET.parse('registration-entries.xml')
+xmlfile_arg = sys.argv[1]
+
+tree = ET.parse(xmlfile_arg)
 root = tree.getroot()
 
-f = open('activesetup.bat', 'w')
+f = open('wb_activesetup.bat', 'w')
 
 for entry in root.findall('entry'):
     keypath = entry.get('name')
     keyname = keypath.split('\\')[-1]
+
     for value in entry.findall('value'):
         valuename = value.get('name')
         data = value.find('data').text
