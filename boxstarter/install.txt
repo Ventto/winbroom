@@ -1,0 +1,25 @@
+Set-ExplorerOptions -showHiddenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Enable-RemoteDesktop
+
+cinst 7zip.install
+cinst 7zip.commandline
+cinst ccleaner
+cinst everything
+cinst firefox
+cinst git
+cinst notepadplusplus
+cinst putty
+cinst cygwin
+cinst javaruntime
+cinst jre8
+cinst python
+cinst rufus
+cinst winscp
+cinst cpu-z
+cinst filezilla
+cinst filezilla.commandline
+cinst daemontoolslite
+cinst skype
+
+cinst Microsoft-Hyper-V-All -source windowsFeatures
+cinst IIS-WebServerRole -source windowsfeatures
