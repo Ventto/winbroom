@@ -1,5 +1,5 @@
 Boxstarter
-================
+==========
 
 >Repeatable, reboot resilient windows environment installations made easy using
 >Chocolatey packages. When its time to repave either bare metal or virtualized
@@ -10,9 +10,10 @@ Boxstarter
 
 Source: http://boxstarter.org/WebLauncher
 
------
+Web Launcher
+------------
 
-## FIXME
-
-/* WebLauncher Configuration */
-
+```
+START http://boxstarter.org/package/nr/url?{URL}
+START http://boxstarter.org/package/nr/url?{PATH}
+```
