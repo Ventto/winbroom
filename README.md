@@ -1,18 +1,19 @@
 Win-broom
 ===================
 
-Personal Clean-up Windows 7+ NTLite configuration with Chocolatey & Boxstarter 
+[![Status](https://img.shields.io/badge/status-experimental-red.svg?style=flat)](https://github.com/Ventto/winbroom)
 
-----------
+*"Windows v7+ Customization Experiences."*
 
-## Versions
+## Tools
 
-* **Boxstarter v2.8.29** -  Leverages Chocolatey packages to automate the installation of software and create repeatable, scripted Windows environments
-* **Chocolatey v0.10.0** -  Machine Package Manager, like apt-get for Windows
-* **NTLite v1.1.0.4135** - Cutting edge Windows configuration tool
-
+* **Boxstarter** -  Uses Choco packages to automate installations
+                    and create repeatable, scripted Windows environment.
+* **Chocolatey** -  Machine Package Manager, like apt-get for Windows.
+* **NTLite** - Cutting edge Windows configuration tool.
+* **Vagrant** - Build and distribute virtualized development environments.
 ## TODO
 
-* Custom Windows with Boxstarter instead of .REG files
-* Inject a Boxstarter 'startup on boot' script
-* Vagrant instead of the NTLite sculptor
+- [ ] Custom Windows with Boxstarter instead of .REG files
+- [ ] Inject a Boxstarter 'startup on boot' script
+- [ ] Vagrant deployment
