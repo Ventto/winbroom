@@ -10,7 +10,7 @@ Win-broom
 * **Boxstarter** -  Uses Choco packages to automate installations
                     and create repeatable, scripted Windows environment.
 * **Chocolatey** -  Machine Package Manager, like apt-get for Windows.
-* **NTLite** - Cutting edge Windows configuration tool.
+* **NTLite v1.5x** - Cutting edge Windows configuration tool.
 * **Vagrant** - Build and distribute virtualized development environments.
 ## TODO
 
