@@ -3,7 +3,7 @@ Win-broom
 
 [![Status](https://img.shields.io/badge/status-experimental-red.svg?style=flat)](https://github.com/Ventto/winbroom)
 
-*"Windows v7+ Customization Experiences."*
+*"Windows 10 Customization Experiences."*
 
 ## Tools
 
